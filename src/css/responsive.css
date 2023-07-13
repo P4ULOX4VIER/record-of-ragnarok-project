@@ -1,0 +1,47 @@
+@media (max-width: 1061px){
+    .header img{
+        max-width: 190px;
+    }
+
+    .characters-selection{
+        flex-direction: column-reverse;
+        max-width: 430px;
+        margin: 0 auto /* put the element in the center */
+        /* In this case justify-content won't work because the element contains a width */
+        /* 0 means that is 0px on the top and down ---- auto means that it will divide into right and left the rest, and then it will centerline the element */
+        /*the element margin you can write in different ways, for example: margin: 10px 10px 10px 10px , basically it will put 10px on the top, right, down, left. Always the sequence like a clock*/ 
+
+    }
+
+    .characters-selection .characters {
+        margin-top: 37px; /*put a space between elements*/
+    }
+
+    .characters-selection .characters .title {
+        font-size: 15px;
+    }
+
+    .characters-selection .characters-list{
+        gap: 9px;
+    }
+
+    .characters-selection .character img{
+        width: 80px;
+    }
+
+    .selected-character .big-character{
+        width: 350px;
+        height: 350px;
+    }
+
+    .selected-character .description-character{
+        width: 80%;
+        font-size: 16px;
+        margin: 20px auto;
+    }   
+
+    footer{
+        padding-top: 10%;
+    }
+
+}

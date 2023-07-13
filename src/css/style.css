@@ -1,0 +1,112 @@
+
+.header{
+    background-color: rgb(93, 90, 90);
+}
+
+body{
+    font-family: Oxanium, cursive;
+    background: #000000;
+    color: #ffffff;
+    
+    
+}
+
+/*pseudo-element it will create in css a HTML element that doesn't exist in your HTML code.  */
+/* It means that BEFORE body, it will create a new element */
+
+body::before {
+    content: "";
+    /*background-image: url(../images/bg-logo/bg.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute; /* position is a property of positioning --- absolute means that it it will stay absolutely positioned, it will crate like a frame/sheet */
+    /*The before created this frame and put it before others*/
+    z-index: -1; /* the z is the axis of profundity, so the -1 will bring them back of all, however the 1 will bring it in front of all */
+    background-position: center;
+    opacity: 0.9;
+}
+
+.header{
+    display: flex;
+    justify-content: center; /* Flex parent property*/
+    height: 120px;
+}
+
+.characters-selection {
+    display: flex; /* Always come the property flex:direction: row selected*/
+    align-items: center; /* Align items in vertical*/
+    gap: 30px; /* put a space between the sections or divs*/
+    min-height: calc(100vh - 120px); /* vh = viewport(browser screen) high*   ----   152px = / discounting the high of the header ---- it will eliminates the scroll, the scroll results depending the screen of the pc, specifically the height in this case ---- it means that you will put a height of 100vh discounting the  height of the header*/
+    
+    justify-content: center;
+    
+
+
+}
+
+.characters-selection .characters-list {
+    display: flex;
+    flex-wrap: wrap; /* Break line the elements if doesn't have space enough*/
+    gap: 30px; /*space between the elements*/
+    justify-content: center; /*Align items horizontal depending what did you put in the */
+
+    /*If you use flex-direction row, therefore the justify-content will always align the items in the horizontal*/
+}
+
+.characters-selection .characters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 585px;
+    gap: 25px;
+}
+
+.characters-selection .characters .title {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #47f4ff;
+    /* The thickness / the type of border / color */ 
+    width: 100%; /*The % is related to the Parent div, always will be related to the parent div*/
+    text-align: center;
+}
+
+.characters-list .character img{
+    width: 100%;
+    height: 100%;
+}
+
+.characters-list .character.selected{
+    box-shadow: 0px 0px 24px 5px #47f4ff;
+    /*opacity and other, you can use some websites for this*/
+}
+
+/*If an element contain 2 or more classes, hence you create like that example, they both gathered " .character.selected" */
+
+.selected-character{
+    text-align: center;
+    max-height: 530px;
+}
+.selected-character .big-character {
+    width: 430px;
+    height: 430px;
+}
+
+.selected-character .name-character{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.selected-character .description-character{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+    
+    
+}
+

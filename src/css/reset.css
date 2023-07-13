@@ -1,0 +1,10 @@
+*{
+    margin: 0; /*Elements external spaces*/
+    padding: 0; /* Elements internal spaces */
+    box-sizing: border-box; /*Allows to work with widths easily, avoid to calculate some property*/
+
+}
+
+ul {
+    list-style: none;
+}
